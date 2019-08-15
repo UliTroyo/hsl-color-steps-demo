@@ -1,0 +1,157 @@
+:root {
+  --columns: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: hsl(220, 80%, 60%);
+  color: white;
+  font-family: monospace;
+  font-size: 1.2rem;
+  height: 100%;
+  width: 100%;
+}
+
+label[for='hue'] > span {
+  background: hsl(220, 100%, 50%);
+  border: 1px solid white;
+  float: right;
+  height: 1em;
+  width: 1em;
+}
+
+label[for='saturation'] > span {
+  float: right;
+}
+
+label[for='lightness'] > span {
+  float: right;
+}
+
+.container {
+  background: #181111;
+  background: radial-gradient(circle, hsl(0, 7%, 12%) 30%, hsl(0, 7%, 5%) 100%);
+
+  border: 1px solid white;
+  box-shadow: 0px 10px 30px hsla(0, 0%, 0%, 0.5);
+  color: black;
+  display: grid;
+  grid-gap: 2vw;
+  grid-template: 1fr 200px / 200px 1fr;
+  grid-template-areas:
+    'sliders square'
+    'sliders square';
+
+  height: 900px;
+  height: calc(100vh - (4vw * 2));
+
+  margin: 4%;
+  margin: 4vw;
+
+  padding: 2%;
+  padding: 2vw;
+
+  width: 90%;
+  width: calc(100vw - (4vw * 2));
+}
+
+.color-graph {
+  color: white;
+  grid-area: square;
+}
+
+.color-graph:hover {
+  cursor: pointer;
+}
+
+.color-graph table {
+  border-collapse: collapse;
+  height: 100%;
+  width: 100%;
+}
+
+.color-graph tr {
+  border: none;
+}
+
+.color-graph td {
+  border: none;
+  position: relative;
+  text-align: center;
+}
+
+td:hover .cell-text {
+  background: black;
+  border: 1px solid white;
+  display: inline;
+  left: 50%;
+  opacity: 1;
+  padding: 1rem;
+  position: absolute;
+  transform: translate(-50%, -175%);
+  z-index: 4;
+}
+
+td:hover .cell-text:after {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' stroke-linejoin='round' stroke-miterlimit='2' clip-rule='evenodd' viewBox='0 0 50 50'><path fill='%23fff' d='M-.002 0l25 50 25-50h-50z'/><path d='M2.498 0l22.5 45 22.5-45h-45z'/></svg>");
+  bottom: 2px;
+  content: '';
+  display: block;
+  height: 1em;
+  left: 50%;
+  margin-right: -50%;
+  position: absolute;
+  transform: translate(-50%, 100%);
+  width: 1em;
+  z-index: 2;
+}
+
+.cell-text {
+  display: none;
+  font-family: monospace;
+  font-size: 1.2rem;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.sliders {
+  background: #181111;
+  background: radial-gradient(circle, hsl(0, 7%, 12%) 30%, hsl(0, 7%, 5%) 100%);
+
+  border: 1px solid white;
+  color: white;
+  display: grid;
+  grid-area: sliders;
+}
+
+.sliders__menu {
+  display: grid;
+  height: 200px;
+  padding: 2em;
+  transform: translate(-100%) rotate(-90deg);
+  transform-origin: top right;
+  width: calc(100vmin - 12vw);
+}
+
+.sliders__slider {
+  cursor: pointer;
+  margin: 0;
+  width: 100%;
+}
+
+@media screen and (max-width: 100vmin) {
+  .container {
+    grid-template-areas:
+      'square square'
+      'sliders sliders';
+  }
+
+  .sliders__menu {
+    transform: rotate(0deg);
+  }
+}

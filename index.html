@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HSL color steps demo</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="hsl-color.1.0.0.css" />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="57x57"
+      href="https://res.cloudinary.com/ulitroyo/image/upload/v1565912371/web/HSL%20color%20steps/apple-touch-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="114x114"
+      href="https://res.cloudinary.com/ulitroyo/image/upload/v1565912371/web/HSL%20color%20steps/apple-touch-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="72x72"
+      href="https://res.cloudinary.com/ulitroyo/image/upload/v1565912371/web/HSL%20color%20steps/apple-touch-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="144x144"
+      href="https://res.cloudinary.com/ulitroyo/image/upload/v1565912371/web/HSL%20color%20steps/apple-touch-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="120x120"
+      href="https://res.cloudinary.com/ulitroyo/image/upload/v1565912371/web/HSL%20color%20steps/apple-touch-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="152x152"
+      href="https://res.cloudinary.com/ulitroyo/image/upload/v1565912371/web/HSL%20color%20steps/apple-touch-icon-152x152.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://res.cloudinary.com/ulitroyo/image/upload/v1565912371/web/HSL%20color%20steps/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://res.cloudinary.com/ulitroyo/image/upload/v1565912371/web/HSL%20color%20steps/favicon-16x16.png"
+      sizes="16x16"
+    />
+    <meta name="application-name" content="HSL color steps" />
+    <meta name="msapplication-TileColor" content="#00AAFF" />
+    <meta
+      name="msapplication-TileImage"
+      content="https://res.cloudinary.com/ulitroyo/image/upload/v1565912371/web/HSL%20color%20steps/apple-touch-icon-144x144.png"
+    />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ulitroyo" />
+
+    <!-- OpenGraph -->
+    <meta
+      property="og:image"
+      content="https://res.cloudinary.com/ulitroyo/image/upload/v1565912962/web/HSL%20color%20steps/hsl-color-steps.png"
+    />
+    <meta
+      property="og:url"
+      content="https://ulitroyo.github.io/hsl-color-steps-demo/"
+    />
+    <meta property="og:title" content="RGB Color Selector" />
+    <meta
+      property="og:description"
+      content="Part of a demo about how HSL can help with accessibility."
+    />
+  </head>
+  <body>
+    <main class="container">
+      <article class="color-graph">
+        <table></table>
+      </article>
+      <aside class="sliders">
+        <form class="sliders__menu">
+          <label for="hue"
+            >Hue
+            <span></span>
+            <input
+              name="hue"
+              type="range"
+              min="0"
+              max="360"
+              value="220"
+              class="sliders__slider"
+            />
+          </label>
+
+          <label for="saturation"
+            >Saturation Columns
+            <span>15</span>
+            <input
+              name="saturation"
+              type="range"
+              min="3"
+              max="20"
+              value="15"
+              class="sliders__slider"
+            />
+          </label>
+
+          <label for="lightness"
+            >Lightness Rows
+            <span>10</span>
+            <input
+              name="lightness"
+              type="range"
+              min="3"
+              max="20"
+              value="10"
+              class="sliders__slider"
+            />
+          </label>
+        </form>
+      </aside>
+    </main>
+  </body>
+  <script src="hsl-color.1.0.0.js"></script>
+</html>
